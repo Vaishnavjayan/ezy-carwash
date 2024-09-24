@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Car, Droplets, Phone, MapPin, Clock } from "lucide-react"
 import Link from "next/link"
 import { motion } from "framer-motion"
+import Navbar from "@/components/Navbar";
 
 export default function EzyCarwash() {
   const containerVariants = {
@@ -31,24 +32,8 @@ export default function EzyCarwash() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <motion.header 
-        className="bg-blue-600 text-white"
-        initial={{ y: -50 }}
-        animate={{ y: 0 }}
-        transition={{ type: "spring", stiffness: 100 }}
-      >
-        <div className="container mx-auto px-4 py-6 flex justify-between items-center">
-          <h1 className="text-3xl font-bold">Ezy Carwash</h1>
-          <nav>
-            <ul className="flex space-x-4">
-              <li><Link href="/" className="hover:underline">Home</Link></li>
-              <li><Link href="/services" className="hover:underline">Services</Link></li>
-              <li><Link href="/contact" className="hover:underline">Contact</Link></li>
-              <li><Link href="/booking" className="hover:underline">Book Now</Link></li>
-            </ul>
-          </nav>
-        </div>
-      </motion.header>
+      <Navbar />
+  
 
       <main className="flex-grow">
         <motion.section 
